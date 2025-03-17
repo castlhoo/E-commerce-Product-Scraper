@@ -1,33 +1,33 @@
 # 🛍️ E-commerce Product Scraper
 
-이 프로젝트는 특정 웹사이트에서 **상품 정보를 크롤링**하고, 이를 **MySQL 데이터베이스에 저장**하는 Python 스크립트입니다.
+This project is a Python script that **scrapes product information** from a specific website and **stores it in a MySQL database**.
 
-## 📖 프로젝트 개요
-- `requests`와 `BeautifulSoup`을 사용하여 웹사이트에서 상품 정보 수집
-- `pymysql`을 이용해 **MySQL 데이터베이스에 상품명과 카테고리 저장**
-- **퍼블릭 웹사이트의 데이터를 파싱하여 크롤링** (예제 URL: `https://davelee-fun.github.io/`)
+## 📖 Project Overview
+- Uses `requests` and `BeautifulSoup` to scrape product information from a website.
+- Utilizes `pymysql` to **store product names and categories** in a MySQL database.
+- **Parses and scrapes data from a public website** (Example URL: `https://davelee-fun.github.io/`).
 
 ---
 
-## 📁 프로젝트 구조
+## 📁 Project Structure
 ```
 📂 crawling_SQL_project
-├── 📄 crawling_SQL.py        # 크롤링 및 MySQL 저장 스크립트
-└── 📄 README.md         # 프로젝트 설명 파일
+├── 📄 crawling_SQL.py        # Crawling and MySQL storage script
+└── 📄 README.md              # Project documentation file
 ```
 
 ---
 
-## 🔧 설치 방법
+## 🔧 Installation Guide
 
-### 1️⃣ **필수 라이브러리 설치**
-Python 3.x 환경에서 아래 패키지를 설치하세요:
+### 1️⃣ **Install Required Libraries**
+Ensure you have Python 3.x installed, then install the necessary packages:
 ```sh
 pip install requests beautifulsoup4 pymysql
 ```
 
-### 2️⃣ **MySQL 데이터베이스 설정**
-MySQL에 접속하여 다음 SQL을 실행하세요:
+### 2️⃣ **Set Up MySQL Database**
+Log into MySQL and execute the following SQL commands:
 ```sql
 CREATE DATABASE ecommerce;
 USE ecommerce;
@@ -39,8 +39,8 @@ CREATE TABLE teddyproducts (
 );
 ```
 
-### 3️⃣ **MySQL 접속 정보 설정**
-MySQL 접속 정보를 저장할 `config.py` 파일을 생성하세요:
+### 3️⃣ **Configure MySQL Connection**
+Create a `config.py` file and add your MySQL connection details:
 ```python
 DB_CONFIG = {
     'host': 'localhost',
@@ -53,7 +53,14 @@ DB_CONFIG = {
 ```
 ---
 
-## 📡 크롤링 대상 (퍼블릭 데이터)
-이 스크립트는 아래 **퍼블릭 웹사이트**의 데이터를 크롤링합니다:
+## 📡 Crawling Target (Public Data)
+This script scrapes data from the following **public website**:
 - **URL:** [`https://davelee-fun.github.io/`](https://davelee-fun.github.io/)
-- 상품 카테고리와 상품명을 수집하여 MySQL에 저장
+- Collects product categories and product names, then stores them in MySQL.
+
+---
+
+## 📜 License
+This project is distributed under the **MIT License**.
+
+✅ **If you have any questions, feel free to open an issue or discussion!** 😊
